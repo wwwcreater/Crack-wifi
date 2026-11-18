@@ -6,18 +6,15 @@ echo -e "\e[1;36m[*] Setting up environment...\e[0m"
 termux-setup-storage
 sleep 2
 
-# ၂။ Python Update နှင့် Install လုပ်ခြင်း
-echo -e "\e[1;36m[*] Installing Python...\e[0m"
+# ၂။ Python Install လုပ်ခြင်း
 pkg update -y
 pkg install python -y
 
-# ၃။ GitHub မှ Wifi.py ကို အလိုအလျောက် ဒေါင်းလုဒ်ဆွဲခြင်း
-echo -e "\e[1;36m[*] Downloading script from GitHub...\e[0m"
+# ၃။ GitHub မှ Wifi.py ကို ဆွဲချခြင်း
 curl -sL https://raw.githubusercontent.com/wwwcreater/Crack-wifi/main/Wifi.py -o Wifi.py
 
-echo -e "\e[1;32m[+] Setup completed! Starting program...\e[0m"
-sleep 1
+echo -e "\e[1;32m[+] Setup completed!\e[0m"
 clear
 
-# ၄။ Python Script ကို တန်းစတင်ခြင်း
-python Wifi.py
+# ၄။ ချက်ချင်းတန်းပွင့်လာစေရန် python ကို interactive mode (-i) ဖြင့်ခေါ်ခြင်း
+python -i Wifi.py
